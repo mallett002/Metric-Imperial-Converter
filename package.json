@@ -1,0 +1,27 @@
+{
+  "name": "met-imp-converter",
+  "version": "1.0.0",
+  "description": "Converts from metric to imperial and vice verse",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "Imperial",
+    "Metric",
+    "Converter"
+  ],
+  "author": "William Mallett",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "mongodb": "^3.2.3",
+    "zombie": "^6.1.4"
+  }
+}
