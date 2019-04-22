@@ -3,13 +3,7 @@ const bodyParser = require('body-parser');
 const routes = require('./routes');
 const app = express();
 const helmet = require('helmet');
-const dotenv = require('dotenv');
-
-// configure .env contents to go to process.env
-const { error } = dotenv.config();
-if (error) {
-  throw error
-}
+const config = require('./config');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -40,6 +34,6 @@ app.use((req, res, next) => {
         .send('Not Found');
 });
 
-app.listen(process.env.PORT || 8001, () => {
-    console.log("App running on port " + process.env.PORT);
+app.listen(config.PORT || 8001, () => {
+    console.log("App running on port " + config.PORT);
 });
