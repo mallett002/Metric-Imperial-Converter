@@ -1,5 +1,12 @@
 class ConvertHandler {
-
+    constructor() {
+      this.getNum = this.getNum.bind(this);
+      this.getUnit = this.getUnit.bind(this);
+      this.getReturnUnit = this.getReturnUnit.bind(this);
+      this.spellOutUnit = this.spellOutUnit.bind(this);
+      this.convert = this.convert.bind(this);
+      this.getString = this.getString.bind(this);
+    }
     getNum(input) {
       const inputRegex = /([0-9]+\.?([0-9]+)?)\/?([0-9]+(\.[0-9]+)?)?/;
       const roundRegex = /[0-9]+\.[0-9]{5}?([0-9]+)?/;
@@ -29,7 +36,7 @@ class ConvertHandler {
       const regex = /[a-z]+$/i;
       const match = input.match(regex);
 
-      if (!match) return null;
+      if (!match) return undefined;
       if (!this.getReturnUnit(match[0])) return undefined;
 
       return match[0];
@@ -56,7 +63,7 @@ class ConvertHandler {
       }
     }
 
-    spellOutUni(unit) {
+    spellOutUnit(unit) {
       const lowerCasedUnit = unit.toLowerCase();
 
       switch(lowerCasedUnit) {
@@ -119,7 +126,7 @@ class ConvertHandler {
        initUnit,
        returnNum,
        returnUnit,
-       string: `${initNum} ${this.spellOutUni(initUnit)} converts to ${returnNum} ${this.spellOutUni(returnUnit)}`
+       string: `${initNum} ${this.spellOutUnit(initUnit)} converts to ${returnNum} ${this.spellOutUnit(returnUnit)}`
      };
     }
 

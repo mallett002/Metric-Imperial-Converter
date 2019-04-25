@@ -4,7 +4,7 @@
   "description": "Converts from metric to imperial and vice verse",
   "main": "server.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha"
   },
   "keywords": [
     "Imperial",
@@ -21,6 +21,7 @@
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "helmet": "^3.16.0",
+    "mocha": "^6.1.4",
     "mongodb": "^3.2.3",
     "zombie": "^6.1.4"
   },
