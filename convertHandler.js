@@ -7,10 +7,16 @@ class ConvertHandler {
       this.convert = this.convert.bind(this);
       this.getString = this.getString.bind(this);
     }
+
     getNum(input) {
+      const mutlipleSlashReg = /[0-9.?]?(\/)[0-9.?]+(\/)/;
       const inputRegex = /([0-9]+\.?([0-9]+)?)\/?([0-9]+(\.[0-9]+)?)?/;
       const roundRegex = /[0-9]+\.[0-9]{5}?([0-9]+)?/;
       const match = input.match(inputRegex);
+
+      if (input.match(mutlipleSlashReg)) {
+        return undefined;
+      }
 
       if (!match) {
         return undefined;

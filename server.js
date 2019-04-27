@@ -37,3 +37,5 @@ app.use((req, res, next) => {
 app.listen(config.PORT || 8001, () => {
     console.log("App running on port " + config.PORT);
 });
+
+module.exports = app;
