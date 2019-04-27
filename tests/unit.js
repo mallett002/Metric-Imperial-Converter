@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const convertHandler = require('../convertHandler');
+const convertHandler = require('../src/convertHandler');
 
 describe('Convert Handler Class', () => {
     describe('Function convertHandler.getNum', () => {
