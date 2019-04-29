@@ -1,2 +1,2 @@
-# Metric-Imperial-Converter
-Converts metric to imperial and vice versa
+# Metric-Imperial-Converter API
+An API that converts metric to imperial and vice versa
